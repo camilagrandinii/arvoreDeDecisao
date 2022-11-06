@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
-// using System.IO;
-namespace DecisionTree
-{
-  class DecisionTreeProgram
+  class arvoreDecisao
   {
     static void Main(string[] args)
     {
@@ -74,14 +71,14 @@ namespace DecisionTree
                       0, 2, 2, 2, 2, 2, 2, 2, 2, 2,
                       2 };
 
-      Console.WriteLine("Iris 30-item subset looks like: ");
-      Console.WriteLine("5.1, 3.5, 1.4, 0.2 -> 0");
-      Console.WriteLine("7.0, 3.2, 4.7, 1.4 -> 1");
-      Console.WriteLine("6.3, 3.3, 6.0, 2.5 -> 2");
+      Console.WriteLine("Inimaogos-item subset looks like: ");
+      Console.WriteLine("1, 0, 0, 8 -> 1");
+      Console.WriteLine("2, 0, 0, 10 -> 1");
+      Console.WriteLine("3, 0, 0, 12 -> 2");
       Console.WriteLine(" . . . ");
 
       Console.WriteLine("\nBuilding 7-node 3-class decision tree");
-      DecisionTree dt = new DecisionTree(7, 3);
+      DecisionTree dt = new DecisionTree(7, 4);
       dt.BuildTree(dataX, dataY);
 
       // Console.WriteLine("\nTree is: ");
@@ -95,8 +92,8 @@ namespace DecisionTree
       double acc = dt.Accuracy(dataX, dataY);
       Console.WriteLine("Classification accuracy = " + acc.ToString("F4"));
 
-      double[] x = new double[] { 6.0, 2.0, 3.0, 4.0 };
-      Console.WriteLine("\nPredicting class for (6.0, 2.0, 3.0, 4.0)");
+      double[] x = new double[] { 1.0, 1.0, 1.0, 8.0 };
+      Console.WriteLine("\nPredicting class for (1.0, 0.0, 0.0, 0.0)");
       int predClass = dt.Predict(x, verbose: true);
 
       Console.WriteLine("\nEnd demo ");
@@ -385,8 +382,5 @@ namespace DecisionTree
       public List<int> greaterRows;
     }
 
-    // ----------
-
   } // DecisionTree class
-
-} // ns
+// DecisionTree class
