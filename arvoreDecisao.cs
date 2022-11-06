@@ -10,43 +10,69 @@ namespace DecisionTree
       Console.WriteLine("\nBegin decision tree demo \n");
 
       double[][] dataX = new double[30][];
-      dataX[0] = new double[] { 5.1, 3.5, 1.4, 0.2 };  // 0
-      dataX[1] = new double[] { 4.9, 3.0, 1.4, 0.2 };
-      dataX[2] = new double[] { 4.7, 3.2, 1.3, 0.2 };
-      dataX[3] = new double[] { 4.6, 3.1, 1.5, 0.2 };
-      dataX[4] = new double[] { 5.0, 3.6, 1.4, 0.2 };
-      dataX[5] = new double[] { 5.4, 3.9, 1.7, 0.4 };
-      dataX[6] = new double[] { 4.6, 3.4, 1.4, 0.3 };
-      dataX[7] = new double[] { 5.0, 3.4, 1.5, 0.2 };
-      dataX[8] = new double[] { 4.4, 2.9, 1.4, 0.2 };
-      dataX[9] = new double[] { 4.9, 3.1, 1.5, 0.1 };
+      dataX[0] = new double[] { 1, 0, 0, 8 };  // 0
+      dataX[1] = new double[] { 2, 0, 0, 10 };
+      dataX[2] = new double[] { 3, 0, 0, 12 };
+      dataX[3] = new double[] { 4, 0, 0, 14 };
+      dataX[4] = new double[] { 5, 0, 0, 20 };
+      dataX[5] = new double[] { 1, 5, 1, 3 };
+      dataX[6] = new double[] { 2, 5, 1, 5 };
+      dataX[7] = new double[] { 3, 5, 2, 7 };
+      dataX[8] = new double[] { 4, 5, 3, 9 };
+      dataX[9] = new double[] { 5, 5, 2, 15 };
 
-      dataX[10] = new double[] { 7.0, 3.2, 4.7, 1.4 };  // 1
-      dataX[11] = new double[] { 6.4, 3.2, 4.5, 1.5 };
-      dataX[12] = new double[] { 6.9, 3.1, 4.9, 1.5 };
-      dataX[13] = new double[] { 5.5, 2.3, 4.0, 1.3 };
-      dataX[14] = new double[] { 6.5, 2.8, 4.6, 1.5 };
-      dataX[15] = new double[] { 5.7, 2.8, 4.5, 1.3 };
-      dataX[16] = new double[] { 6.3, 3.3, 4.7, 1.6 };
-      dataX[17] = new double[] { 4.9, 2.4, 3.3, 1.0 };
-      dataX[18] = new double[] { 6.6, 2.9, 4.6, 1.3 };
-      dataX[19] = new double[] { 5.2, 2.7, 3.9, 1.4 };
+      dataX[10] = new double[] { 1, 3, 1, 0 };  // 1
+      dataX[11] = new double[] { 2, 2, 2, 0 };
+      dataX[12] = new double[] { 3, 4, 2, 0 };
+      dataX[13] = new double[] { 4, 1, 2, 0 };
+      dataX[14] = new double[] { 5, 5, 3, 0 };
+      dataX[15] = new double[] { 1, 2, 1, 4 };
+      dataX[16] = new double[] { 2, 3, 2, 6 };
+      dataX[17] = new double[] { 3, 4, 2, 8 };
+      dataX[18] = new double[] { 4, 3, 3, 9 };
+      dataX[19] = new double[] { 5, 4, 3, 12 };
 
-      dataX[20] = new double[] { 6.3, 3.3, 6.0, 2.5 };   // 2
-      dataX[21] = new double[] { 5.8, 2.7, 5.1, 1.9 };  
-      dataX[22] = new double[] { 7.1, 3.0, 5.9, 2.1 };
-      dataX[23] = new double[] { 6.3, 2.9, 5.6, 1.8 };
-      dataX[24] = new double[] { 6.5, 3.0, 5.8, 2.2 };
-      dataX[25] = new double[] { 7.6, 3.0, 6.6, 2.1 };
-      dataX[26] = new double[] { 4.9, 2.5, 4.5, 1.7 };
-      dataX[27] = new double[] { 7.3, 2.9, 6.3, 1.8 };
-      dataX[28] = new double[] { 6.7, 2.5, 5.8, 1.8 };
-      dataX[29] = new double[] { 7.2, 3.6, 6.1, 2.5 };
+      dataX[20] = new double[] { 1, 4, 1, 3 };   // 2
+      dataX[21] = new double[] { 2, 1, 1, 8 };  
+      dataX[22] = new double[] { 3, 2, 1, 6 };
+      dataX[23] = new double[] { 4, 4, 2, 2 };
+      dataX[24] = new double[] { 5, 4, 3, 9 };
+      dataX[25] = new double[] { 4, 1, 1, 5 };
+      dataX[26] = new double[] { 5, 3, 3, 10 };
+      dataX[27] = new double[] { 4, 2, 1, 10 };
+      dataX[28] = new double[] { 5, 2, 2, 5 };
+      dataX[29] = new double[] { 1, 1, 1, 5 };
+
+      dataX[30] = new double[] { 1, 3, 1, 1 };   // 2
+      dataX[31] = new double[] { 1, 4, 1, 8 };  
+      dataX[32] = new double[] { 2, 3, 2, 5 };
+      dataX[33] = new double[] { 2, 4, 2, 3 };
+      dataX[34] = new double[] { 2, 2, 1, 8 };
+      dataX[35] = new double[] { 4, 4, 3, 10 };
+      dataX[36] = new double[] { 1, 5, 1, 2 };
+      dataX[37] = new double[] { 2, 1, 2, 0 };
+      dataX[38] = new double[] { 3, 5, 2, 3 };
+      dataX[39] = new double[] { 4, 1, 2, 0 };
+
+      dataX[40] = new double[] { 5, 5, 2, 10 };   // 2
+      dataX[41] = new double[] { 3, 2, 1, 3 };  
+      dataX[42] = new double[] { 3, 1, 2, 2 };
+      dataX[43] = new double[] { 2, 0, 0, 5 };
+      dataX[44] = new double[] { 5, 4, 3, 10 };
+      dataX[45] = new double[] { 5, 4, 2, 7 };
+      dataX[46] = new double[] { 5, 4, 2, 3 };
+      dataX[47] = new double[] { 4, 4, 1, 1 };
+      dataX[48] = new double[] { 4, 3, 1, 10 };
+      dataX[49] = new double[] { 4, 2, 2, 5 };
+      dataX[50] = new double[] { 2, 2, 1, 3 };
 
       int[] dataY = 
-        new int[30] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                      1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-                      2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+        new int[50] { 1, 1, 2, 3, 3, 0, 0, 0, 0, 0,
+                      0, 0, 0, 0, 0, 1, 1, 1, 1, 1,
+                      1, 2, 2, 2, 2, 3, 3, 3, 3, 1,
+                      1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+                      0, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                      2 };
 
       Console.WriteLine("Iris 30-item subset looks like: ");
       Console.WriteLine("5.1, 3.5, 1.4, 0.2 -> 0");
