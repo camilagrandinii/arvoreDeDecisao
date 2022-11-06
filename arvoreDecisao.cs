@@ -9,7 +9,7 @@ namespace DecisionTree
     {
       Console.WriteLine("\nBegin decision tree demo \n");
 
-      double[][] dataX = new double[30][];
+      double[][] dataX = new double[50][];
       dataX[0] = new double[] { 1, 0, 0, 8 };  // 0
       dataX[1] = new double[] { 2, 0, 0, 10 };
       dataX[2] = new double[] { 3, 0, 0, 12 };
@@ -67,7 +67,7 @@ namespace DecisionTree
       dataX[50] = new double[] { 2, 2, 1, 3 };
 
       int[] dataY = 
-        new int[50] { 1, 1, 2, 3, 3, 0, 0, 0, 0, 0,
+        new int[51] { 1, 1, 2, 3, 3, 0, 0, 0, 0, 0,
                       0, 0, 0, 0, 0, 1, 1, 1, 1, 1,
                       1, 2, 2, 2, 2, 3, 3, 3, 3, 1,
                       1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
