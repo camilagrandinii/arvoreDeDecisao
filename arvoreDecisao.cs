@@ -9,7 +9,7 @@ namespace DecisionTree
     {
       Console.WriteLine("\nBegin decision tree demo \n");
 
-      double[][] dataX = new double[50][];
+      double[][] dataX = new double[51][];
       dataX[0] = new double[] { 1, 0, 0, 8 };  // 0
       dataX[1] = new double[] { 2, 0, 0, 10 };
       dataX[2] = new double[] { 3, 0, 0, 12 };
