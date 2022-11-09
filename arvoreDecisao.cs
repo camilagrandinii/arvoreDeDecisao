@@ -78,7 +78,7 @@ using System.Collections.Generic;
       Console.WriteLine(" . . . ");
 
       Console.WriteLine("\nBuilding 7-node 3-class decision tree");
-      DecisionTree dt = new DecisionTree(7, 4);
+      DecisionTree dt = new DecisionTree(250, 4);
       dt.BuildTree(dataX, dataY);
 
       // Console.WriteLine("\nTree is: ");
@@ -92,7 +92,7 @@ using System.Collections.Generic;
       double acc = dt.Accuracy(dataX, dataY);
       Console.WriteLine("Classification accuracy = " + acc.ToString("F4"));
 
-      double[] x = new double[] { 1.0, 1.0, 1.0, 8.0 };
+      double[] x = new double[] { 4.0, 4.0, 2.5, 0.0 };
       Console.WriteLine("\nPredicting class for (1.0, 0.0, 0.0, 0.0)");
       int predClass = dt.Predict(x, verbose: true);
 
