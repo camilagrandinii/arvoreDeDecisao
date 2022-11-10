@@ -92,8 +92,14 @@ using System.Collections.Generic;
       double acc = dt.Accuracy(dataX, dataY);
       Console.WriteLine("Classification accuracy = " + acc.ToString("F4"));
 
-      double[] x = new double[] { 4.0, 4.0, 2.5, 0.0 };
-      Console.WriteLine("\nPredicting class for (1.0, 0.0, 0.0, 0.0)");
+      //Variáveis a serem alteradas
+      double fase = 4.0;
+      double tela = 4.0;
+      double dificuldade = 2.5;
+      double restante= 0.0; 
+
+      double[] x = new double[] { fase, tela, dificuldade, restante };
+      Console.WriteLine("\nPredicting class for ({0}, {1}, {2}, {0}", fase, tela, dificuldade, restante );
       int predClass = dt.Predict(x, verbose: true);
 
       Console.WriteLine("\nEnd demo ");
